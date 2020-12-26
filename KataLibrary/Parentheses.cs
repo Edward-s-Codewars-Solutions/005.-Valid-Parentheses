@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Linq;
 
 public static class Parentheses
 {
@@ -17,8 +17,21 @@ public static class Parentheses
 
     public static bool DoesEachParenHaveItsPair(string input)
     {
+        var parensCollection = input
+            .ToCharArray()
+            .Where(x => (x == '(' || x == ')'));
 
+        var parensString = string.Join("", parensCollection);
 
-        throw new NotImplementedException();
+        bool continueLoop;
+
+        do
+        {
+            int parensStringLength = parensString.Length;
+            parensString = parensString.Replace("()", default);
+            continueLoop = parensString.Length != parensStringLength;
+        } while (continueLoop);
+
+        return string.IsNullOrEmpty(parensString);
     }
 }
