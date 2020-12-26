@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class MyUnitTests
 {
-    private static IEnumerable<TestCaseData> TestDataWitParens
+    private static IEnumerable<TestCaseData> TestDataWithParens
     {
         get
         {
