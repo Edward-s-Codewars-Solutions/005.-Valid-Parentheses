@@ -15,7 +15,7 @@ public static class Parentheses
         };
     }
 
-    private static bool DoesEachParenHaveItsPair(string input)
+    public static bool DoesEachParenHaveItsPair(string input)
     {
 
 
